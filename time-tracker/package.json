@@ -1,5 +1,6 @@
 {
   "name": "time-tracker",
+  "homepage": "https://w4gfo.github.io/TimeTracking/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
