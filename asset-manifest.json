@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TimeTracking/static/css/main.97da4aa9.css",
+    "main.js": "/TimeTracking/static/js/main.af697a59.js",
+    "static/js/787.20c99025.chunk.js": "/TimeTracking/static/js/787.20c99025.chunk.js",
+    "index.html": "/TimeTracking/index.html",
+    "main.97da4aa9.css.map": "/TimeTracking/static/css/main.97da4aa9.css.map",
+    "main.af697a59.js.map": "/TimeTracking/static/js/main.af697a59.js.map",
+    "787.20c99025.chunk.js.map": "/TimeTracking/static/js/787.20c99025.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97da4aa9.css",
+    "static/js/main.af697a59.js"
+  ]
+}
