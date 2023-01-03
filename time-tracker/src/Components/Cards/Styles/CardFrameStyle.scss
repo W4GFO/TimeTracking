@@ -1,0 +1,8 @@
+@import '../../../Utils/globalStyles.scss';
+
+.card-frame-container {
+	width: 100%;
+	height: $CARD_HEIGHT;
+	border: 1px solid black;
+	border-radius: 8px;
+}

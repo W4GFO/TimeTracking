@@ -1,6 +1,89 @@
-main {
-	width: 80%;
-	height: 90%;
+@import '../../../Utils/globalStyles.scss';
 
-	border: 1px solid black;
+main {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	// overflow: hidden;
+	// overflow-y: scroll;
+
+	//border: 1px solid black;
+	background-color: orange;
 }
+
+.cards-grid {
+	display: grid;
+
+	width: 98%;
+	gap: 10px;
+
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+
+	grid-template-areas: 
+		"img-card" 
+		"sch1" 
+		"sch2" 
+		"sch3"
+		"sch4" 
+		"sch5" 
+		"sch6"
+	;
+}
+
+.user-card {
+	grid-area: img-card;
+	align-self: center;
+}
+
+.cal-evt1 {
+	grid-area: sch1;
+	//align-self: flex-end;
+	//justify-self: end;
+}
+
+.cal-evt2 {
+	grid-area: sch2;
+	//align-self: flex-end;
+}
+
+.cal-evt3 {
+	grid-area: sch3;
+	//align-self: flex-end;
+}
+
+.cal-evt4 {
+	grid-area: sch4;
+	//justify-self: end;
+}
+
+.cal-evt5 {
+	grid-area: sch5;
+}
+
+.cal-evt6 {
+	grid-area: sch6;
+}
+
+@media only screen and (min-width:$DESKTOP_BP) {
+	main {
+		width: 100%;
+		height: 100%;
+	}
+
+	.cards-grid {
+		width: 90%;
+		gap: 10px 12px;
+	
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: repeat(4, 1fr);
+
+		grid-template-areas: 
+			"img-card sch1 sch2 sch3"
+			"img-card sch4 sch5 sch6"
+		;
+	}
+}
+

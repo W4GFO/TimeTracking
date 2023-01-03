@@ -1,0 +1,15 @@
+@import '../../../Utils/globalStyles.scss';
+
+.user-card-container {
+	width: 100%;
+	height: $CARD_HEIGHT;
+	background-color: red;
+}
+
+@media only screen and (min-width:$DESKTOP_BP) {
+	.user-card-container {
+		width: 100%;
+		height: 100%;
+	}
+}
+
