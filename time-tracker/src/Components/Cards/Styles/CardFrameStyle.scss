@@ -6,3 +6,13 @@
 	border: 1px solid black;
 	border-radius: 8px;
 }
+
+
+@media only screen and (min-width:$DESKTOP_BP) {
+	.card-frame-container {
+		width: $CARD_HEIGHT;
+		height: $CARD_HEIGHT;
+		border: 1px solid black;
+		border-radius: 8px;
+	}
+}
