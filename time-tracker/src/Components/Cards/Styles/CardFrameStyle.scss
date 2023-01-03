@@ -1,18 +1,85 @@
 @import '../../../Utils/globalStyles.scss';
 
 .card-frame-container {
+	position: relative;
+
 	width: 100%;
-	height: $CARD_HEIGHT;
-	border: 1px solid black;
 	border-radius: 8px;
+	height: $CARD_HEIGHT;
 }
 
+//The image in the upper right hand corner
+.card-frame-container img {
+	position: absolute;
+
+	top: 0;
+	right: 0;
+}
+
+.cardinfo-frame {
+	position: absolute;
+
+	bottom: 0;
+	width: 100%;
+	height: 75%;
+
+	border-radius: 8px;
+	background-color: $Dark_Blue;
+}
+
+.cardinfo-frame-titlebar {
+	color: $Pale_Blue;
+	margin-top: 18px;
+}
+
+.cardinfo-frame-titlebar img {
+	margin: 28px 18px 0px 0px;
+}
+
+.cardinfo-frame-titlebar span {
+	font-weight: 500;
+	font-size: 1.2em;
+	margin: 0px 0px 0px 12px;
+}
+
+// .cardinfo-frame-data-content {
+	
+// }
+
+.cardinfo-frame-data-content-frame {
+	
+}
+
+.cardinfo-frame-data-content-hours-worked {
+	color: white;
+}
+
+.cardinfo-frame-data-content-hours-last-week {
+	color: $Pale_Blue;
+}
 
 @media only screen and (min-width:$DESKTOP_BP) {
 	.card-frame-container {
+		border-radius: 8px;
 		width: $CARD_HEIGHT;
 		height: $CARD_HEIGHT;
-		border: 1px solid black;
-		border-radius: 8px;
 	}
+
+	.cardinfo-frame {
+		height: 78%;
+	}
+
+	.cardinfo-frame-data-content-hours-worked {
+		display: block;
+		font-size: 1.9em;
+		font-weight: 400;
+		margin: 28px 0px 0px 12px;
+	}
+	
+	.cardinfo-frame-data-content-hours-last-week {
+		display: block;
+		font-size: 0.9em;
+		margin: 4px 0px 0px 12px;
+	}
+
 }

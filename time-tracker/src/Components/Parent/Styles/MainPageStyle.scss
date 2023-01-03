@@ -36,26 +36,32 @@ main::-webkit-scrollbar {
 
 .cal-evt1 {
 	grid-area: sch1;
+	background-color: $PRIMARY_Light_Red_Work;
 }
 
 .cal-evt2 {
 	grid-area: sch2;
+	background-color: $PRIMARY_Soft_Blue;
 }
 
 .cal-evt3 {
 	grid-area: sch3;
+	background-color: $PRIMARY_Light_Red_Study;
 }
 
 .cal-evt4 {
 	grid-area: sch4;
+	background-color: $PRIMARY_Lime_Green;
 }
 
 .cal-evt5 {
 	grid-area: sch5;
+	background-color: $PRIMARY_Violet;
 }
 
 .cal-evt6 {
 	grid-area: sch6;
+	background-color: $PRIMARY_Soft_Orange;
 }
 
 @media only screen and (min-width:$DESKTOP_BP) {
@@ -66,7 +72,7 @@ main::-webkit-scrollbar {
 
 	.cards-grid {
 		width: 100%;
-		gap: 10px 12px;
+		gap: 0px 8px;
 	
 		grid-template-rows: 1fr 1fr;
 		grid-template-columns: repeat(4, 1fr);
@@ -76,5 +82,12 @@ main::-webkit-scrollbar {
 			"img-card sch4 sch5 sch6"
 		;
 	}
+
+	//Line up the bottoms with the user display info
+	.cal-evt4, .cal-evt5, .cal-evt6{
+		align-self: flex-end;
+	}
+	
+
 }
 

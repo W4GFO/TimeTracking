@@ -17,7 +17,6 @@ export const MainPage = (props: MainProps) => {
 		setTimeFrameSelectioin(tf)	
 	}
 
-
 	useEffect(() => {
 		setSchedule(parseData())
 	}, []) 
