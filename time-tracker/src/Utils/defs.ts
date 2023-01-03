@@ -1,3 +1,4 @@
+import { createContext } from 'react'
 import schedule from './data.json'
 
 export const NUM_CARDS:number = 6
@@ -7,6 +8,8 @@ export enum TIMEFRAME {
 	WEEKLY,
 	MONTHLY
 }
+
+export const timeframeSelectionContext: React.Context<TIMEFRAME | undefined> = createContext<TIMEFRAME | undefined>(undefined)
 
 export type EventOccurance = {
 	timeframe:TIMEFRAME

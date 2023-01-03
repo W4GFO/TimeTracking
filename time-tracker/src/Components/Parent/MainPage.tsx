@@ -1,13 +1,22 @@
 import './Styles/MainPageStyle.scss'
-import {Schedule, parseData, indexToGridClassName} from '../../Utils/defs'
+import {timeframeSelectionContext, Schedule, parseData, indexToGridClassName, TIMEFRAME} from '../../Utils/defs'
 import { useState, useEffect } from 'react'
 import {CardFrame} from '../Cards/CardFrame'
 import {UserCard} from '../Cards/UserCard'
+
+import {timeframeEnumToString} from '../../Utils/defs'
 
 type MainProps = {}
 
 export const MainPage = (props: MainProps) => {
 	const [schedule, setSchedule] = useState<Schedule>({} as Schedule)
+	const [timeframeSelection, setTimeFrameSelectioin] = useState<TIMEFRAME>(TIMEFRAME.DAILY)
+
+	const updateTimeFrameSelection = (tf:TIMEFRAME) => {
+		console.log("The new timeframe is: " + timeframeEnumToString(tf as TIMEFRAME))
+		setTimeFrameSelectioin(tf)	
+	}
+
 
 	useEffect(() => {
 		setSchedule(parseData())
@@ -20,13 +29,18 @@ export const MainPage = (props: MainProps) => {
   	return (
 		<main>
 			<div className='cards-grid'>
-				<UserCard className='user-card'/>
+
+			<timeframeSelectionContext.Provider value={timeframeSelection}>
+
+				<UserCard className='user-card' funcSetNewTimeFrame={updateTimeFrameSelection}/>
 
 				{
 					schedule.scheduleCategories && schedule.scheduleCategories.map((scheduleFullEvent, idx) => {
 						return <CardFrame key={idx} className={indexToGridClassName(idx)}  schedule={scheduleFullEvent} />
 					})
 				}
+
+				</timeframeSelectionContext.Provider>
 			</div>
 		</main>
 	)

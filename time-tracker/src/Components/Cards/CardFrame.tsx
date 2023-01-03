@@ -1,5 +1,6 @@
+import { useContext } from 'react'
 import './Styles/CardFrameStyle.scss'
-import {ScheduleCategory, timeframeEnumToString} from '../../Utils/defs'
+import {ScheduleCategory, timeframeEnumToString, timeframeSelectionContext} from '../../Utils/defs'
 
 type CardProps = {
 	className:string
@@ -7,6 +8,8 @@ type CardProps = {
 }
 
 export const CardFrame = ({className, schedule}: CardProps) => {
+	const tfSelection= useContext(timeframeSelectionContext)
+
 	const containerClassName:string = className + ' card-frame-container'
 
 	return (
