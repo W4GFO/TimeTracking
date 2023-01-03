@@ -4,29 +4,37 @@
 	width: 100%;
 	overflow: hidden;
 	border-radius: 10px;
-	background-color: cadetblue;
+	background-color: $Dark_Blue;
 }
 
 .user-card-person {
 	display: flex;
 	flex-direction: row;
-	background-color: blue;
+	height: $CARD_HEIGHT / 1.5;
+	background-color: $PRIMARY_Blue;
+	border-radius: 10px 10px 10px 10px;
 }
 
 .user-card-timeframes-frame {
 	display: flow-root;
-	background-color: pink;
 }
 
 .user-card-list-of-timeframes {
+	color: white;
 	list-style-type: none;
+
+	display: flex;
+	margin: 18px 0px 18px 28px;
+}
+
+.user-card-list-of-timeframes li {
+	flex: 1;
 }
 
 .user-card-person-textinfo {
 	flex: 2;
 	margin-left: 8px;
 	color: white;
-	border: 1px solid orange;
 
 	//So the text itself lines up the way we want it within the block
 	display: flex;
@@ -36,12 +44,12 @@
 }
 
 .user-card-person-textinfo p:first-child {
-	color: orange;
+	color:$Pale_Blue;
 	font-size: 0.9em;
 }
 
 .user-card-person-textinfo p {
-	color: purple;
+	color: white;
 	font-size: 1.8em;
 }
 
@@ -67,9 +75,9 @@
 
 	.user-card-person {
 		width: 100%;
+		height: unset;
 		gap: 40px;
 		flex-direction: column;
-		border-radius: 10px 10px 10px 10px;
 	}
 
 	.user-card-person-textinfo {
@@ -90,17 +98,17 @@
 	}
 	
 	.user-card-list-of-timeframes {
+		flex-direction: column;
 		margin-left: 12px;
 	}
 
 	.user-card-list-of-timeframes li:first-child {
 		margin-top: 16px;
-		color: blue;
+		color: $Pale_Blue;
 	}
 
 	.user-card-list-of-timeframes li {
 		margin-top: 12px;
-		color: orange;
 	}
 
 	.user-card-person-imageinfo {

@@ -5,10 +5,14 @@ main {
 	background-color: rgba($color: #00FFFF, $alpha: 0.4);
 }
 
+main::-webkit-scrollbar {
+	display: none;
+ }
+
 .cards-grid {
 	display: grid;
 
-	width: 98%;
+	width: 100%;
 	gap: 10px;
 
 	grid-template-rows: auto;
