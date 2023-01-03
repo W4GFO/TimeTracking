@@ -2,13 +2,15 @@
 
 .user-card-container {
 	width: 100%;
+	overflow: hidden;
 	border-radius: 10px;
-	height: $CARD_HEIGHT;
-	background-color: red;
+	background-color: cadetblue;
 }
 
 .user-card-person {
-	background-color: green;
+	display: flex;
+	flex-direction: row;
+	background-color: blue;
 }
 
 .user-card-timeframes-frame {
@@ -20,6 +22,43 @@
 	list-style-type: none;
 }
 
+.user-card-person-textinfo {
+	flex: 2;
+	margin-left: 8px;
+	color: white;
+	border: 1px solid orange;
+
+	//So the text itself lines up the way we want it within the block
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.user-card-person-textinfo p:first-child {
+	color: orange;
+	font-size: 0.9em;
+}
+
+.user-card-person-textinfo p {
+	color: purple;
+	font-size: 1.8em;
+}
+
+.user-card-person-imageinfo {
+	flex: 1;
+	width: 100%;
+
+	//So the image itself lines up the way we want it within the block
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.user-card-person-imageinfo img {
+	width: 45%;
+}
+
 @media only screen and (min-width:$DESKTOP_BP) {
 	.user-card-container {
 		height: 100%;
@@ -28,18 +67,30 @@
 
 	.user-card-person {
 		width: 100%;
-		height: 60%;
-		border-radius: 10px 10px 0px 0px;
+		gap: 40px;
+		flex-direction: column;
+		border-radius: 10px 10px 10px 10px;
+	}
+
+	.user-card-person-textinfo {
+		flex: 1;
+		margin-bottom: 55px;
+	}
+
+	.user-card-person-textinfo p {
+		font-size: 2.4em;
+	}
+
+	.user-card-person-textinfo p:first-child {
+		font-size: 1.1em;
 	}
 
 	.user-card-timeframes-frame {
-		height: 40%;
 		border-radius: 0px 0px 10px 10px;
 	}
 	
 	.user-card-list-of-timeframes {
 		margin-left: 12px;
-		//border-radius: 0px 0px 10px 10px;
 	}
 
 	.user-card-list-of-timeframes li:first-child {
@@ -50,5 +101,15 @@
 	.user-card-list-of-timeframes li {
 		margin-top: 12px;
 		color: orange;
+	}
+
+	.user-card-person-imageinfo {
+		flex: 2;
+		justify-content: flex-start;
+	}
+
+	.user-card-person-imageinfo img {
+		width: 40%;
+		margin: 25px 0px 0px 12px;
 	}
 }
