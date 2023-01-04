@@ -96,6 +96,9 @@ export const parseData = ():Schedule => {
 			monthlyEvent.current = elmt.timeframes.monthly.current
 			monthlyEvent.previous = elmt.timeframes.monthly.previous
 
+			//We're adding these into the array specifically in this 
+			//order so we can just pull the values out based on the 
+			//value contained in the TIMEFRAME enum.
 			category.Events.push(dailyEvent)
 			category.Events.push(weeklyEvent)
 			category.Events.push(monthlyEvent)
