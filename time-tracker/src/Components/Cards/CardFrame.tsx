@@ -16,7 +16,6 @@ type CardProps = {
 	schedule:ScheduleCategory
 }
 
-
 export const CardFrame = ({className, schedule}: CardProps) => {
 	const tfSelCtx:TIMEFRAME | undefined = useContext<TIMEFRAME | undefined>(timeframeSelectionContext)
 	const timeframeSelection:TIMEFRAME = (tfSelCtx !== undefined) ? tfSelCtx : TIMEFRAME.DAILY

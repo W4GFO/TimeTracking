@@ -3,9 +3,9 @@
 .card-frame-container {
 	position: relative;
 
-	width: 100%;
+	width: 88%;
 	border-radius: 8px;
-	height: $CARD_HEIGHT;
+	height: $CARD_HEIGHT_MOBILE;
 }
 
 //The image in the upper right hand corner
@@ -32,6 +32,7 @@
 	margin-top: 18px;
 }
 
+//This is the 3 dots/ellipsis image
 .cardinfo-frame-titlebar img {
 	margin: 28px 18px 0px 0px;
 }
@@ -42,19 +43,22 @@
 	margin: 0px 0px 0px 12px;
 }
 
-// .cardinfo-frame-data-content {
-	
-// }
-
 .cardinfo-frame-data-content-frame {
-	
+	display: flex;
+	margin:24px 12px 0px 12px;
+	align-items: center;
+	justify-content: center;
 }
 
 .cardinfo-frame-data-content-hours-worked {
+	flex: 1;
 	color: white;
+	font-size: 1.8em;
 }
 
 .cardinfo-frame-data-content-hours-last-week {
+	flex: 1;
+	text-align: end;
 	color: $Pale_Blue;
 }
 
@@ -69,6 +73,11 @@
 		height: 78%;
 	}
 
+	.cardinfo-frame-data-content-frame {
+		display: block;
+		margin:0px;
+	}
+
 	.cardinfo-frame-data-content-hours-worked {
 		display: block;
 		font-size: 1.9em;
@@ -79,7 +88,7 @@
 	.cardinfo-frame-data-content-hours-last-week {
 		display: block;
 		font-size: 0.9em;
+		text-align: start;
 		margin: 4px 0px 0px 12px;
 	}
-
 }
