@@ -1,8 +1,12 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// Import the functions you need from the SDKs you need. The pattern is...
+//import {...} from 'firebase/[SERVICE]
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+
+import {initializeApp} from 'firebase/app'
+import {getFirestore} from 'firebase/firestore'
+import {getAnalytics} from 'firebase/analytics'
+import {getAuth, GoogleAuthProvider, signInWithPopup, UserCredential} from "firebase/auth"
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -18,5 +22,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const FirebaseApp = initializeApp(firebaseConfig);
+
+export const FirebaseAuth = getAuth(FirebaseApp)
+export const FirebaseDB = getFirestore(FirebaseApp)
+export const FirebaseAnalytics = getAnalytics(FirebaseApp)
+export const GoogleFirebaseAuthProvider = new GoogleAuthProvider()
