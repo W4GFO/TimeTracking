@@ -18,7 +18,7 @@ export const UserCard = ({className, funcSetNewTimeFrame}: UserCardProps) => {
 		<div className={userCardClassName}>
 			<section className='user-card-person'>
 				<div className='user-card-person-imageinfo'>
-					<img src={IMG}/>
+					<img src={IMG} alt='segment indicator'/>
 				</div>
 
 				<div className='user-card-person-textinfo'>

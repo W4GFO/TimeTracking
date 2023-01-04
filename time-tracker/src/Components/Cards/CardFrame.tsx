@@ -69,11 +69,11 @@ export const CardFrame = ({className, schedule}: CardProps) => {
 
 	return (
 		<section className={containerClassName}>
-			<img src={getImage()} />
+			<img src={getImage()} alt='card indicator'/>
 			<div className='cardinfo-frame'>
 				<div className='cardinfo-frame-titlebar'>
 					<span>{schedule.title}</span>
-					<img src={ELLIPSIS_ICON} />
+					<img src={ELLIPSIS_ICON} alt='ellipsis options' />
 				</div>
 
 				<div className='cardinfo-frame-data-content-frame'>

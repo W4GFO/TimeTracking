@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react'
 import {CardFrame} from '../Cards/CardFrame'
 import {UserCard} from '../Cards/UserCard'
 
-import {timeframeEnumToString} from '../../Utils/defs'
-
 type MainProps = {}
 
 export const MainPage = (props: MainProps) => {

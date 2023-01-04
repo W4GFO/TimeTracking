@@ -15,6 +15,10 @@ main::-webkit-scrollbar {
 	width: 100%;
 	gap: 10px;
 
+	margin-top: 16px;
+	margin-bottom: 16px;
+	justify-items: center;
+
 	grid-template-rows: auto;
 	grid-template-columns: 1fr;
 
@@ -72,6 +76,7 @@ main::-webkit-scrollbar {
 
 	.cards-grid {
 		width: 100%;
+		margin: 0px;
 		gap: 0px 8px;
 	
 		grid-template-rows: 1fr 1fr;
@@ -87,7 +92,5 @@ main::-webkit-scrollbar {
 	.cal-evt4, .cal-evt5, .cal-evt6{
 		align-self: flex-end;
 	}
-	
-
 }
 
