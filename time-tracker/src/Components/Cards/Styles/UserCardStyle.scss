@@ -10,7 +10,7 @@
 .user-card-person {
 	display: flex;
 	flex-direction: row;
-	height: $CARD_HEIGHT / 1.5;
+	height: calc($CARD_HEIGHT / 1.5);
 	background-color: $PRIMARY_Blue;
 	border-radius: 10px 10px 10px 10px;
 }
