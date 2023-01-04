@@ -1,13 +1,17 @@
 import './Styles/MainPageStyle.scss'
-import {timeframeSelectionContext, Schedule, parseData, indexToGridClassName, TIMEFRAME} from '../../Utils/defs'
-import { useState, useEffect } from 'react'
-import {CardFrame} from '../Cards/CardFrame'
+
 import {UserCard} from '../Cards/UserCard'
+import {CardFrame} from '../Cards/CardFrame'
+import { useState, useEffect, useContext} from 'react'
+import {timeframeSelectionContext, userScheduleContext, Schedule, indexToGridClassName, TIMEFRAME} from '../../Utils/defs'
+
 
 type MainProps = {}
 
 export const MainPage = (props: MainProps) => {
-	const [schedule, setSchedule] = useState<Schedule>({} as Schedule)
+	const schedule:Schedule | undefined = useContext<Schedule | undefined>(userScheduleContext)
+
+	//const [schedule, setSchedule] = useState<Schedule>({} as Schedule)//Uncomment to use the test json file
 	const [timeframeSelection, setTimeFrameSelectioin] = useState<TIMEFRAME>(TIMEFRAME.DAILY)
 
 	const updateTimeFrameSelection = (tf:TIMEFRAME) => {
@@ -15,12 +19,8 @@ export const MainPage = (props: MainProps) => {
 	}
 
 	useEffect(() => {
-		setSchedule(parseData())
+		//setSchedule(parseData()) //Uncomment to use the test json file
 	}, []) 
-
-	if(schedule.scheduleCategories === null) {
-		return (<p>Nothing to see</p>)
-	}
 
   	return (
 		<main>
@@ -31,7 +31,7 @@ export const MainPage = (props: MainProps) => {
 				<UserCard className='user-card' funcSetNewTimeFrame={updateTimeFrameSelection}/>
 
 				{
-					schedule.scheduleCategories && schedule.scheduleCategories.map((scheduleFullEvent, idx) => {
+					schedule && schedule.TopLevel && schedule.TopLevel.map((scheduleFullEvent, idx) => {
 						return <CardFrame key={idx} className={indexToGridClassName(idx)}  schedule={scheduleFullEvent} />
 					})
 				}
