@@ -13,7 +13,6 @@ export const MainPage = (props: MainProps) => {
 	const [timeframeSelection, setTimeFrameSelectioin] = useState<TIMEFRAME>(TIMEFRAME.DAILY)
 
 	const updateTimeFrameSelection = (tf:TIMEFRAME) => {
-		console.log("The new timeframe is: " + timeframeEnumToString(tf as TIMEFRAME))
 		setTimeFrameSelectioin(tf)	
 	}
 

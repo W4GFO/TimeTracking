@@ -1,5 +1,6 @@
 import './Styles/UserCardStyle.scss'
-import {TIMEFRAME} from '../../Utils/defs'
+import { useContext } from 'react'
+import {TIMEFRAME, timeframeSelectionContext} from '../../Utils/defs'
 import IMG from '../../Images/image-jeremy.png'
 
 type UserCardProps = {
@@ -9,6 +10,9 @@ type UserCardProps = {
 
 export const UserCard = ({className, funcSetNewTimeFrame}: UserCardProps) => {
 	const userCardClassName:string = className + ' user-card-container'
+
+	const tfctx:TIMEFRAME | undefined = useContext<TIMEFRAME | undefined>(timeframeSelectionContext)
+	const selectedTimeframe:TIMEFRAME = (tfctx !== undefined) ? tfctx : TIMEFRAME.DAILY
 
 	return (
 		<div className={userCardClassName}>
@@ -24,9 +28,12 @@ export const UserCard = ({className, funcSetNewTimeFrame}: UserCardProps) => {
 			</section>
 			<section className='user-card-timeframes-frame'>
 				<ul className='user-card-list-of-timeframes'>
-					<li onClick={() => {funcSetNewTimeFrame(TIMEFRAME.DAILY)}}>Daily</li>
-					<li onClick={() => {funcSetNewTimeFrame(TIMEFRAME.WEEKLY)}}>Weekly</li>
-					<li onClick={() => {funcSetNewTimeFrame(TIMEFRAME.MONTHLY)}}>Monthly</li>
+					<li className={(selectedTimeframe === TIMEFRAME.DAILY ? 'user-selected-timeframe-decoration' : '')}
+						onClick={() => {funcSetNewTimeFrame(TIMEFRAME.DAILY)}}>Daily</li>
+					<li className={(selectedTimeframe === TIMEFRAME.WEEKLY ? 'user-selected-timeframe-decoration' : '')}
+						onClick={() => {funcSetNewTimeFrame(TIMEFRAME.WEEKLY)}}>Weekly</li>
+					<li className={(selectedTimeframe === TIMEFRAME.MONTHLY ? 'user-selected-timeframe-decoration' : '')}
+						onClick={() => {funcSetNewTimeFrame(TIMEFRAME.MONTHLY)}}>Monthly</li>
 				</ul>
 			</section>
 		</div>

@@ -43,11 +43,6 @@
 	justify-content: center;
 }
 
-.user-card-person-textinfo p:first-child {
-	color:$Pale_Blue;
-	font-size: 0.9em;
-}
-
 .user-card-person-textinfo p {
 	color: white;
 	font-size: 1.8em;
@@ -65,6 +60,12 @@
 
 .user-card-person-imageinfo img {
 	width: 45%;
+}
+
+.user-selected-timeframe-decoration {
+	color: $Pale_Blue;
+	font-size: 1.05em;
+	text-decoration: underline;
 }
 
 @media only screen and (min-width:$DESKTOP_BP) {
@@ -104,7 +105,6 @@
 
 	.user-card-list-of-timeframes li:first-child {
 		margin-top: 16px;
-		color: $Pale_Blue;
 	}
 
 	.user-card-list-of-timeframes li {
