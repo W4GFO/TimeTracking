@@ -47,7 +47,7 @@ https://firebase.google.com/docs/firestore/quickstart
 
 ## IMPORTANT PART!!!!!
 
-Once you're ready to add in all the project information into your code segment ## DO NOT
+Once you're ready to add in all the project information into your code segment **DO NOT**
 place that into any file which will ever be put into a public repo!!!!!!!!!
 
 
