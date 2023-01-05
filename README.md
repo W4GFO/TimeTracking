@@ -40,7 +40,7 @@ In the Firebase project, I am using the FireStore Database service.
 
 	Go to https://firebase.google.com/ and then go to the Firebase Console:
 
-	![Firebase Console](./fireimages/1.png)
+![Firebase Console](./fireimages/1.png)
 
 
 
