@@ -2,14 +2,29 @@
 
 In the interest of giving something back to this platform, I wanted to put together a Firebase solution that anybody can freely copy and use for thier own projects.  
 
-This project makes us of the Firebase Database and the Firebase Google authentication user account.
+This project makes use of the FireStore Database and the Firebase Auth Google user login.
 
 This project will update in real-time whenever there are changes to the back-end database and/or
 the user's "logged In/Out" status changes.
 
 I put this together because, sometimes figuring all this out through trial and error, endless searching, hours watching tutorial videos, guessing, and a bunch of StackOverflow can be pretty time consuming.
 
-When I do include external documents in this project, I will try to make them as specific as possible.
+When I do include external links in this project, I will try to make them as specific as possible.
+
+# Code Set up
+
+In this project, I've kept the Firebase specific functionality very localized for understanding's sake.
+
+1st: The FirebaseUtils.ts is the file I am using just to creats/allocate the Firebase specific variables.  There variables are used to access the Firebase functionality.
+
+2nd: The Firebase functionality is contained within the App.tsx file. Specifically:
+	* Within the useEffect - the onSnapshot allows us to "monitor" the real-time updates of the FireStore Database.
+
+	* The onLogInOut function which is called when the dummy button is clicked (which I removed since it isn't really part of the UI - those its code is just commented out)
+
+	* The onAuthStateChanged function so we are notified whenever the user's "Logged-In" status changes
+
+**NOTE:** There is a minor descrepency between the initial data in the JSON file and the way the FireStore DB is configured so there is a translation function - **BUT** it isn't really relevant to Firebase functionality within a React Project - just something specific to this one.
 
 # Data
 
@@ -47,14 +62,11 @@ https://firebase.google.com/docs/firestore/quickstart
 
 ## IMPORTANT PART!!!!!
 
-Once you're ready to add in all the project information into your code segment **DO NOT**
+Once you're ready to add in all the project information into your code segment ***DO NOT***
 place that into any file which will ever be put into a public repo!!!!!!!!!
 
 
-### 
-
-
-### The additional npms:
+### The additional npms in this project:
 
 	I'm not really using anything much on this project other than SASS.
 
