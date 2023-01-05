@@ -8,8 +8,18 @@ import {getFirestore} from 'firebase/firestore'
 import {getAnalytics} from 'firebase/analytics'
 import {getAuth, GoogleAuthProvider, signInWithPopup, UserCredential} from "firebase/auth"
 
+/*
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// For Firebase JS SDK v7.20.0 and later
+// NOTE: The naming of the env variables MUST
+//       have the exact prefix of 'REACT_APP_'
+//       otherwise they won't get read in properly.fjfjfjfj
+//
+// Also!!!!!!!!!  Remember you're reading in environment variables
+// which are ONLY read when an app starts. Therefore, remember you
+// may need to restart your IDE after you create your .env.local
+// for your enviornment to read in the values stored in your env variables. 
+*/
 const firebaseConfig = {
 	apiKey: process.env.REACT_APP_API_KEY,
 	authDomain: process.env.REACT_APP_AUTH_DOMAIN,
