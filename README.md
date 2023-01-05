@@ -74,12 +74,37 @@ Below is a link with more than you'll ever want to know about Firebase projects:
 
 ![Firebase Web Appliction name](./fireimages/5.png)
 
-## WARNING!!!!!!!!
-
-## IMPORTANT PART!!!!!
+## WARNING!!!!!!!!  IMPORTANT PART!!!!!
 
 Once you're ready to add in all the project information into your code segment ***DO NOT***
 place that into any file which will ever be put into a public repo!!!!!!!!!
+
+Here, create a the following file in the project's root directory - ie: The same level as your package.json file.  Additionally - Make ***ABSOLUTELY CERTAIN*** this file is in your .gitignore so that is ***NEVER*** commited to your repo!  ***ESSPECIALLY*** a public repo!
+
+```
+> touch .env.local
+```
+
+The above file's naming convention must be exact
+
+Now, all those crazy numbers and values you see that Firebase is presenting, place those values into your .env.local file.  Below is an example of what you .env.local file might look like (NOTICE - No quotes anywhere).  
+
+Also, the naming convention is critical!  The environment variable's name MUST start with "REACT_APP_" followed by whatever you want - otherwise the variables won't get read in by the environment.
+
+On line 23 of my FirebaseUtils.ts file you can see where I read these variables in.
+
+```
+REACT_APP_API_KEY=QRbcMaBCabcORASDVrm123aBcd4F9BcUrsW_ABc
+REACT_APP_AUTH_DOMAIN=somecoolprojects-4a4ab.firebaseapp.com
+REACT_APP_PROJ_ID=somecoolprojects-4a4ab
+REACT_APP_STORAGEBUCKET=somecoolprojects-4a4ab.appspot.com
+REACT_APP_MESSAGING_SENDER_ID=246810121418
+REACT_APP_APP_ID=8:456789012345:web:i12aaccgg24567w12x3g48
+REACT_APP_MEASUREMENT_ID=A-BC1A2987BD
+```
+
+***NOTE:***  Lastly, remember that this is a file of  environment variables, and remember that environment variables are only read in once by an application and that happens only when the app starts.  So, be sure after creating, entering, AND saving this file that you restart your IDE.  So if you notice your variables aren't being read in - it's a good bet this is why. 
+
 
 
 
