@@ -18,6 +18,7 @@ In this project, I've kept the Firebase specific functionality very localized fo
 1st: The FirebaseUtils.ts is the file I am using just to creats/allocate the Firebase specific variables.  There variables are used to access the Firebase functionality.
 
 2nd: The Firebase functionality is contained within the App.tsx file. Specifically:
+	
 	* Within the useEffect - the onSnapshot allows us to "monitor" the real-time updates of the FireStore Database.
 
 	* The onLogInOut function which is called when the dummy button is clicked (which I removed since it isn't really part of the UI - those its code is just commented out)
@@ -33,7 +34,21 @@ Since JSON is also the format of the Firebase Database, I was able to easily lev
 
 All I basically did was take the data contained within the original file and set up the database with the same data - and more importatnly, in the same format.
 
-In the Firebase project, I am using the FireStore Database service.  The database is set up as follows:
+In the Firebase project, I am using the FireStore Database service.  
+
+# Setting up and Configuring Firebase
+
+	Go to https://firebase.google.com/ and then go to the Firebase Console:
+
+	![Firebase Console](./fireimages/1.png)
+
+
+
+
+
+
+
+The database is set up as follows:
 
 ```
 	Collection -> Document -> Collection -> Document -> [PATTERN REPEATS]
