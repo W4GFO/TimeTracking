@@ -38,9 +38,45 @@ In the Firebase project, I am using the FireStore Database service.
 
 # Setting up and Configuring Firebase
 
-	Go to https://firebase.google.com/ and then go to the Firebase Console:
+***FIRST*** You must set up at least one Firebase project
+
+
+1. Go to https://firebase.google.com/ and then go to the Firebase Console (It should be in the upper righthand side of browser window ):
 
 ![Firebase Console](./fireimages/1.png)
+
+2. Next, you'll either select an existing Firebase project - or create one.  If you're creating one, select the "Add" option:
+
+![Firebase New Project](./fireimages/22.png)
+
+* Now just walk through the steps, providing name, etc... 
+
+* Quick note - Firebase projects contain Firebase Applications - This will become relevant in step 3.
+
+Below is a link with more than you'll ever want to know about Firebase projects:
+
+	https://firebase.google.com/docs/projects/learn-more?authuser=0&hl=en
+
+
+2. Next, you'll want to open the project's settings
+
+![Firebase New Project](./fireimages/2.png)
+
+3. Scroll down to the bottom of the page and select the button to create a new web application:
+
+![Firebase Web Appliction](./fireimages/3.png)
+
+4. Give your web app any name you'd like:
+
+![Firebase Web Appliction name](./fireimages/4.png)
+
+5. Now that you've set up your web application in your Firebase project - you're presented with the settings you'll need to incorporate into your React Project:
+
+![Firebase Web Appliction name](./fireimages/5.png)
+
+
+
+
 
 
 
