@@ -74,6 +74,14 @@ Below is a link with more than you'll ever want to know about Firebase projects:
 
 ![Firebase Web Appliction name](./fireimages/5.png)
 
+## WARNING!!!!!!!!
+
+## IMPORTANT PART!!!!!
+
+Once you're ready to add in all the project information into your code segment ***DO NOT***
+place that into any file which will ever be put into a public repo!!!!!!!!!
+
+
 
 
 
@@ -111,10 +119,6 @@ Below is a good link to get the overall concept to get firebase integrated when 
 https://firebase.google.com/docs/firestore/quickstart
 
 
-## IMPORTANT PART!!!!!
-
-Once you're ready to add in all the project information into your code segment ***DO NOT***
-place that into any file which will ever be put into a public repo!!!!!!!!!
 
 
 ### The additional npms in this project:
