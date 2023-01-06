@@ -13,21 +13,25 @@ When I do include external links in this project, I will try to make them as spe
 
 # Code Set up
 
-***NOTE:*** Is have the '>' as my prompt, so when I write a code segment/command, I have a leading '>' which isn't part of the command, but rather represents my command prompt.  ie:
+***NOTE:*** I have the '>' as my prompt, so when I write a code segment/command, I have a leading '>' which isn't part of the command, but rather represents my command prompt.  ie:
 
 ```
 > [THE COMMAND TO TYPE]
 ```
 
-In this project, I've kept the Firebase specific functionality very localized for understanding's sake.
+Above, you type only the command - without the leading '>'
 
-1st: The FirebaseUtils.ts is the file I am using just to creats/allocate the Firebase specific variables.  There variables are used to access the Firebase functionality.
+In this React project, I've kept the Firebase specific functionality very localized for understanding's sake.
+
+1st: The FirebaseUtils.ts is the file I am using just to creats/allocate the Firebase specific variables.  These variables are used later-on to access the Firebase functionality.
 
 2nd: The Firebase functionality is contained within the App.tsx file. Specifically:
 	
 	* Within the useEffect - the onSnapshot allows us to "monitor" the real-time updates of the FireStore Database.
 
-	* The onLogInOut function which is called when the dummy button is clicked (which I removed since it isn't really part of the UI - those its code is just commented out)
+	* The onLogInOut function which is called when the dummy button is clicked 
+	I've removed this button since it isn't really part of the UI.
+	Thus, its code is just commented out)
 
 	* The onAuthStateChanged function so we are notified whenever the user's "Logged-In" status changes
 
@@ -61,7 +65,7 @@ In the Firebase project, I am using the FireStore Database service.
 
 Below is a link with more than you'll ever want to know about Firebase projects:
 
-	https://firebase.google.com/docs/projects/learn-more?authuser=0&hl=en
+<a href="https://firebase.google.com/docs/projects/learn-more?authuser=0&hl=en" target="_blank">Firebase Projects</a>
 
 
 2. Next, you'll want to open the project's settings
