@@ -170,7 +170,7 @@ For your furture reference - we're setting up the backend before we run a bunch 
 
 # The Database
 
-Let's start by looking at an image which represents what your FireStore database is going to look for this project:
+Let's start by looking at an image which represents what your FireStore database is going to look like for this project:
 
 ![FireStore Data](./fireimages/10.png)
 
@@ -179,7 +179,7 @@ So, what exactly are we looking at?
 1. The "schedules" column represents a collection
 2. The "current" column represents a document within the "schedules" collection
 3. The "TopLevel" column represnts the contents of the "current" document
-- This is what represents the JSON which is contained in the 
+- This "TopLevel" is what represents the JSON which is contained in the 
 JSON document provided in the original project download
 4. Here, you'll notice we needed to name our toplevel array for FireStore to be happy
 5. This is the one difference from the original file.
