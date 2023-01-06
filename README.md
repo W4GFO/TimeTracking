@@ -21,6 +21,21 @@ When I do include external links in this project, I will try to make them as spe
 
 Above, you type only the command - without the leading '>'
 
+
+### Immediately after CRA - you'll set up Firebase with your React project
+
+The first thing you'll want to do when setting up your React project with Firebase is to install firebase.
+
+```
+> npm install firebase
+```
+
+Below is a good link to get the overall concept to get firebase integrated when you're ready to dig in deeper.
+
+<a href="https://firebase.google.com/docs/firestore/quickstart" target="_blank">Firebase Quick Start</a>
+
+# The project
+
 In this React project, I've kept the Firebase specific functionality very localized for understanding's sake.
 
 1st: The FirebaseUtils.ts is the file I am using just to creats/allocate the Firebase specific variables.  These variables are used later-on to access the Firebase functionality.
@@ -82,14 +97,14 @@ Below is a link with more than you'll ever want to know about Firebase projects:
 
 ![Firebase Web Appliction name](./fireimages/4.png)
 
-5. Now that you've set up your web application in your Firebase project - you're presented with the settings you'll need to incorporate into your React Project: (NOTE: This essentially is what is making up my entire FirebaseUtils.ts file - with the exception I point out below)
+5. Now that you've set up your web application in your Firebase project - you're presented with the settings you'll need to incorporate into your React Project: (NOTE: This is essentially what makes up my entire FirebaseUtils.ts file - with the exception I point out below)
 
 ![Firebase Web Appliction name](./fireimages/5.png)
 
 ## WARNING!!!!!!!!  IMPORTANT PART!!!!!
 
 Once you're ready to add in all the project information into your code segment ***DO NOT***
-place the configuration keys and IDs into any file which will ever be put into a public repo!!!!!!!!!
+place the configuration keys and IDs into any file which will ever be put into a repo!!!!!!!!!
 
 Instead, create the following file in the project's root directory - ie: The same level as your package.json file.  Additionally - Make ***ABSOLUTELY CERTAIN*** this file is in your .gitignore so that it ***NEVER*** gets commited to your repo!  ***ESPECIALLY*** a public repo!
 
@@ -147,17 +162,26 @@ Select the service (The database and authentication are selected for display pur
 For your furture reference - we're setting up the backend before we run a bunch of stuff on our web client simple because if the services are set up in Firebase before running the client, you just wind up with a bunch of error logs on your client/dev window.  This isn't about having or not having data in a database, but if you go to try and allocate the DB service on your client, you'll see the errors, same goes for Auth.  It isn't whether you have any users or not, it's if the service has been allocated to the project's application that will cause all the nasty errors to pop-up.
 
 
+# The Database
 
+Let's start by looking at an image which represents what your FireStore database is going to look for this project:
 
+![Firebase Auth Service](./fireimages/Auth2.png)
 
+So, what exactly are we looking at?
 
+1. The "schedules" column represents a collection
+2. The "current" column represents a document within the "schedules" collection
+3. The "TopLevel" column represnts the contents of the "current" document
+- This is what represents the JSON which is contained in the 
+JSON document provided in the original project download
+4. Here, you'll notice we needed to name our toplevel array for FireStore to be happy
+5. This is the one difference from the original file.
+- Thus, the translation function mentioned earlier
 
+## Two things to point out about the database
 
-
-
-
-
-The database is set up as follows:
+1. The database is set up as follows:
 
 ```
 	Collection -> Document -> Collection -> Document -> [PATTERN REPEATS]
@@ -168,44 +192,8 @@ Essentially, a document must reside within a collection and documents canNOT con
 CAVEAT! - A document CAN contain a collection, which can then contain additional documents.
 Below is a very useful link to explain this a little further.
 
-https://firebase.google.com/docs/firestore/data-model
+<a href="https://firebase.google.com/docs/firestore/data-model" target="_blank">FireStore Data Model</>
 
-
-### Setting up Firebase with your React project
-
-The first thing you'll want to do when setting up your React project with Firebase is to install firebase.
-
-```
-> npm install firebase
-```
-
-Below is a good link to get the overall concept to get firebase integrated when you're ready to dig in deeper.
-
-https://firebase.google.com/docs/firestore/quickstart
-
-
-
-
-### The additional npms in this project:
-
-	I'm not really using anything much on this project other than SASS.
-
-	```
-	> npm install sass
-	```
-
-	NOTE: The only reason I'm using SASS is because I like the easy one line comment syntax and I like the syntax it uses for declaring variables.  Everything else is 100% pure CSS so don't worry if you don't know SASS very well.
-
-
-# Go to https://firebase.google.com/
-
-In the upper portion of the page "Go to console" 
-* Here either select an existing project or create/Add a new one
-
-In the upper righthand corner select the cog wheel next to "Project Overview"
-* Then select "Project settings"
-
-Scroll to the bottom of the page and if no app has been created, select the button to create 
-a new web app.  It looks sort'a like an empty HTML tag (</>)
-
-Then name it whatever you'd like
+2. When you're entering data into the FireStore's UI, you will choose "MAP" to represent a JSON object.
+- For example, in the image, current and previous are numbers
+- However, timeframes, daily, monthly, and weekly are all MAP types.
