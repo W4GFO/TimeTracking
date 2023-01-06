@@ -124,7 +124,7 @@ Select the service (The database and authentication are selected for display pur
 
 ***NOTE:*** For a test/dev project, using the initial testing permissions will probably serve you best until you understand Firebases security rules. Below is a good place to learn more.
 
-https://firebase.google.com/docs/rules
+<a href="https://firebase.google.com/docs/rules" target="_blank">Firebase Sec. Rules</a>
 
 - Instantiate the Authentication service (We'll set this up here at the same time)
 
@@ -134,7 +134,11 @@ https://firebase.google.com/docs/rules
 
 ![Firebase Auth Service](./fireimages/Auth2.png)
 
+- Your project ID will be different and you'll need to set the support email.  FYI - neither this project ID nor any of the values I show for the .env.local are real, just an FYI in case anyone was wondering.  I just don't want this documentation to wind up looking like one of those redacted previously classified government documents. 
+
 ![Firebase Auth Service](./fireimages/Auth3.png)
+
+For your furture reference - we're setting up the backend before we run a bunch of stuff on our web client simple because if the services are set up in Firebase before running the client, you just wind up with a bunch of error logs on your client/dev window.  This isn't about having or not having data in a database, but if you go to try and allocate the DB service on your client, you'll see the errors, same goes for Auth.  It isn't whether you have any users or not, it's if the service has been allocated to the project's application that will cause all the nasty errors to pop-up.
 
 
 
