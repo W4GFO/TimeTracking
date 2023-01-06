@@ -172,7 +172,7 @@ For your furture reference - we're setting up the backend before we run a bunch 
 
 Let's start by looking at an image which represents what your FireStore database is going to look for this project:
 
-![Firebase Auth Service](./fireimages/Auth2.png)
+![FireStore Data](./fireimages/10.png)
 
 So, what exactly are we looking at?
 
@@ -198,7 +198,7 @@ Essentially, a document must reside within a collection and documents canNOT con
 CAVEAT! - A document CAN contain a collection, which can then contain additional documents.
 Below is a very useful link to explain this a little further.
 
-<a href="https://firebase.google.com/docs/firestore/data-model" target="_blank">FireStore Data Model</>
+<a href="https://firebase.google.com/docs/firestore/data-model" target="_blank">FireStore Data Model</a>
 
 2. When you're entering data into the FireStore's UI, you will choose "MAP" to represent a JSON object.
 - For example, in the image, current and previous are numbers
