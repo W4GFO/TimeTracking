@@ -13,6 +13,12 @@ When I do include external links in this project, I will try to make them as spe
 
 # Code Set up
 
+***NOTE:*** Is have the '>' as my prompt, so when I write a code segment/command, I have a leading '>' which isn't part of the command, but rather represents my command prompt.  ie:
+
+```
+> [THE COMMAND TO TYPE]
+```
+
 In this project, I've kept the Firebase specific functionality very localized for understanding's sake.
 
 1st: The FirebaseUtils.ts is the file I am using just to creats/allocate the Firebase specific variables.  There variables are used to access the Firebase functionality.
@@ -77,9 +83,9 @@ Below is a link with more than you'll ever want to know about Firebase projects:
 ## WARNING!!!!!!!!  IMPORTANT PART!!!!!
 
 Once you're ready to add in all the project information into your code segment ***DO NOT***
-place that into any file which will ever be put into a public repo!!!!!!!!!
+place the configuration keys and IDs into any file which will ever be put into a public repo!!!!!!!!!
 
-Here, create a the following file in the project's root directory - ie: The same level as your package.json file.  Additionally - Make ***ABSOLUTELY CERTAIN*** this file is in your .gitignore so that is ***NEVER*** commited to your repo!  ***ESSPECIALLY*** a public repo!
+Instead, create the following file in the project's root directory - ie: The same level as your package.json file.  Additionally - Make ***ABSOLUTELY CERTAIN*** this file is in your .gitignore so that it ***NEVER*** gets commited to your repo!  ***ESPECIALLY*** a public repo!
 
 ```
 > touch .env.local
@@ -87,7 +93,7 @@ Here, create a the following file in the project's root directory - ie: The same
 
 The above file's naming convention must be exact
 
-Now, all those crazy numbers and values you see that Firebase is presenting, place those values into your .env.local file.  Below is an example of what you .env.local file might look like (NOTICE - No quotes anywhere).  
+Now, all those crazy numbers and values you see that Firebase is presenting, place those values into your .env.local file.  Below is an example of what your .env.local file might look like (NOTICE - No quotes anywhere).  
 
 Also, the naming convention is critical!  The environment variable's name MUST start with "REACT_APP_" followed by whatever you want - otherwise the variables won't get read in by the environment.
 
@@ -103,9 +109,18 @@ REACT_APP_APP_ID=8:456789012345:web:i12aaccgg24567w12x3g48
 REACT_APP_MEASUREMENT_ID=A-BC1A2987BD
 ```
 
-***NOTE:***  Lastly, remember that this is a file of  environment variables, and remember that environment variables are only read in once by an application and that happens only when the app starts.  So, be sure after creating, entering, AND saving this file that you restart your IDE.  So if you notice your variables aren't being read in - it's a good bet this is why. 
+***NOTE:***  Lastly, remember that this is a file of environment variables and remember that environment variables are only read in once by an application and that happens only when the app starts.  So, be sure after creating, entering, and saving this file that you restart your IDE.  So if you notice your variables aren't being read in - it's a good bet this is why. 
 
 
+6. Now go back into your Firebase project and set up the FireStore database.  You'll need to select the service to create, then create it:
+
+Select the service (The database and authentication are selected for display purposes.  You'll do the same for both, just one at a time.)
+
+![Firebase Web Appliction name](./fireimages/6.png)
+
+Instantiate the service
+
+![Firebase Web Appliction name](./fireimages/7.png)
 
 
 
