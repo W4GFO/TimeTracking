@@ -42,13 +42,19 @@ In this React project, I've kept the Firebase specific functionality very locali
 
 2nd: The Firebase functionality is contained within the App.tsx file. Specifically:
 	
-	* Within the useEffect - the onSnapshot allows us to "monitor" the real-time updates of the FireStore Database.
+* Within the useEffect - the onSnapshot allows us to "monitor" the real-time updates of the FireStore Database.
 
-	* The onLogInOut function which is called when the dummy button is clicked 
+* The onLogInOut function which is called when the dummy button is clicked 
 	I've removed this button since it isn't really part of the UI.
 	Thus, its code is just commented out.
 
-	* The onAuthStateChanged function so we are notified whenever the user's "Logged-In" status changes
+* The onAuthStateChanged function so we are notified whenever the user's "Logged-In" status changes
+
+It's important to keep in mind that you can do all the UI for login/out anywhere - ***HOWEVER*** you should ***ALWAYS*** rely on this callback to make the determination if the user is logged in or not.  
+
+For example: call user logout from whereever, but do ***NOT*** assume that user is logged out until this callback is called with the user's status!  Trust me on this one...
+
+	
 
 **NOTE:** There is a minor descrepency between the initial data in the JSON file and the way the FireStore DB is configured so there is a translation function - **BUT** it isn't really relevant to Firebase functionality within a React Project - just something specific to this one.
 
