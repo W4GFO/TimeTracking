@@ -109,18 +109,27 @@ REACT_APP_APP_ID=8:456789012345:web:i12aaccgg24567w12x3g48
 REACT_APP_MEASUREMENT_ID=A-BC1A2987BD
 ```
 
-***NOTE:***  Lastly, remember that this is a file of environment variables and remember that environment variables are only read in once by an application and that happens only when the app starts.  So, be sure after creating, entering, and saving this file that you restart your IDE.  So if you notice your variables aren't being read in - it's a good bet this is why. 
+***NOTE:***  Lastly, remember that this is a file of environment variables and remember that environment variables are only read in once by an application and that happens only when the app starts.  So, be sure after creating, entering the keys, and saving this file that you restart your IDE.  So if you notice your variables aren't being read in - it's a good bet this is why. 
 
 
 6. Now go back into your Firebase project and set up the FireStore database.  You'll need to select the service to create, then create it:
 
 Select the service (The database and authentication are selected for display purposes.  You'll do the same for both, just one at a time.)
 
-![Firebase Web Appliction name](./fireimages/6.png)
+![Firebase Services](./fireimages/6.png)
 
-Instantiate the service
+- Instantiate the FireStore service (We'll look at setting up the DB itself in a moment)
 
-![Firebase Web Appliction name](./fireimages/7.png)
+![FireStore Service](./fireimages/7.png)
+
+***NOTE:*** For a test/dev project, using the initial testing permissions will probably serve you best until you understand Firebases security rules. Below is a good place to learn more.
+
+https://firebase.google.com/docs/rules
+
+- Instantiate the Authentication service (We'll set this up here at the same time)
+
+![Firebase Auth Service](./fireimages/Auth1.png)
+
 
 
 
