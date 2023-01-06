@@ -31,7 +31,7 @@ In this React project, I've kept the Firebase specific functionality very locali
 
 	* The onLogInOut function which is called when the dummy button is clicked 
 	I've removed this button since it isn't really part of the UI.
-	Thus, its code is just commented out)
+	Thus, its code is just commented out.
 
 	* The onAuthStateChanged function so we are notified whenever the user's "Logged-In" status changes
 
@@ -39,12 +39,14 @@ In this React project, I've kept the Firebase specific functionality very locali
 
 # Data
 
-The data for this project when originally downloaded from FrontEndMentor is using a JSON file.  
+The data for this project included in the original download from FrontEndMentor is using a JSON file.  
 Since JSON is also the format of the Firebase Database, I was able to easily leverage the Firebase Database.  
 
 All I basically did was take the data contained within the original file and set up the database with the same data - and more importatnly, in the same format.
 
 In the Firebase project, I am using the FireStore Database service.  
+
+Let's now go ahead and configure our Firebase project before we jump too far ahead.
 
 # Setting up and Configuring Firebase
 
@@ -80,7 +82,7 @@ Below is a link with more than you'll ever want to know about Firebase projects:
 
 ![Firebase Web Appliction name](./fireimages/4.png)
 
-5. Now that you've set up your web application in your Firebase project - you're presented with the settings you'll need to incorporate into your React Project:
+5. Now that you've set up your web application in your Firebase project - you're presented with the settings you'll need to incorporate into your React Project: (NOTE: This essentially is what is making up my entire FirebaseUtils.ts file - with the exception I point out below)
 
 ![Firebase Web Appliction name](./fireimages/5.png)
 
