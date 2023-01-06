@@ -130,6 +130,12 @@ https://firebase.google.com/docs/rules
 
 ![Firebase Auth Service](./fireimages/Auth1.png)
 
+- Now we'll set up Google as our federated authority provider. ie: The external service we'll use to trust user's login credentials within our own project. (You can use any, but Google is by far the easiest and will get you up and running the fastest.)
+
+![Firebase Auth Service](./fireimages/Auth2.png)
+
+![Firebase Auth Service](./fireimages/Auth3.png)
+
 
 
 
