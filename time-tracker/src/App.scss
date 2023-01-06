@@ -1,0 +1,17 @@
+@import './Utils/globalStyles.scss';
+
+.app {
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+@media only screen and (min-width:$DESKTOP_BP) {
+	.app {
+		width: unset;
+		height: unset;
+	}
+}
+
